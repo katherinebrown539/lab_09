@@ -36,15 +36,15 @@ T** Sort<T>::quickSort(T** items, int numItems, int (*compare) (T* one, T* two))
    //create a new array that will be sorted and returned
    //this is in case the original, unsorted array is also needed
 
+	T** sorted = items;
+	_quickSort
 
 
 
 
 
 
-
-
-
+	return sorted;
 }
 
 template < class T >
