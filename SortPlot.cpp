@@ -14,7 +14,7 @@ SortPlot::SortPlot(int w, int h, int n, int incr, Plot* p) : DrawPanel(w, h, p)
    n_max = n;
    increment = incr;
    plot = p;
-
+//hi
    cds = randomCDs(n_max, 5);  
    sorted_cds = Sort<CD>::mergeSort(cds, n_max, &CD::compare_items);
 }
