@@ -14,6 +14,7 @@ void deleteCDs(ListArray<CD>* list)
    {
       CD* cd = iter->next();
       delete cd;
+	
    }
 
    delete iter;
@@ -21,10 +22,12 @@ void deleteCDs(ListArray<CD>* list)
 
 int main()
 {
+	
    ListArray<CD>* list = CD::readCDs("cds.txt");
 
    CD** cds = list->toArray();
    int size = list->size();
+   cout << size << endl;
    CD** sorted = Sort<CD>::quickSort(cds, size, &CD::compare_items);
    for (int i = 0; i < size; i++)
    {
