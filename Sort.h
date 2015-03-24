@@ -1,7 +1,7 @@
 #if !defined (SORT_H)
 #define SORT_H
-#include <iostream>
-using namespace std;
+
+
 template < class T >
 class Sort
 {
@@ -77,13 +77,13 @@ int Sort<T>::partition(T** items, int first, int last, int (*compare) (T* one, T
    //initially, choosePivot does nothing           
    //choosePivot(items, first, last); 
 
-    int pivot = 0;
-	int lastS1 = 0;
+    int pivot = first;
+	int lastS1 = first;
 	//T* item1;
 	//T* item2;
 	for(int i = first; i <= last; i++)
 	{
-		if((*compare)(items[pivot], items[i]) < 0)
+		if((*compare)(items[i], items[pivot]) < 0)
 		{
 			lastS1++;
 			temp = items[i];
@@ -91,7 +91,6 @@ int Sort<T>::partition(T** items, int first, int last, int (*compare) (T* one, T
 			items[lastS1] = temp;
 		}
 	}
-	cout << "Pivot: " << pivot << endl << "LastS1: " << lastS1 << endl;
 	temp = items[pivot];
 	items[pivot] = items[lastS1];
 	items[lastS1] = temp;

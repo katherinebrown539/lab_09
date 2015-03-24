@@ -2,7 +2,7 @@ AutomatedMakefile = am
 CC = g++
 
 
-FILES = QuickTest.o
+FILES = Plot.o Point.o Points.o SortPlot.o
 EXECUTABLE = Lab09.exe
 
 PROJECT_PATH = $(PROJECT_DIR)
@@ -22,6 +22,14 @@ Lab09: 		$(FILES)
 		$(LINK) $(EXECUTABLE) $(FILES) $(LIBS)	
 
 
-
-QuickTest.o:	QuickTest.cpp Sort.h
-				$(COMPILE) QuickTest.cpp
+Plot.o: Plot.cpp
+		$(COMPILE) Plot.cpp
+		
+Point.o: Point.cpp
+		 $(COMPILE) Point.cpp
+		 
+Points.o: Points.cpp
+			$(COMPILE) Points.cpp
+			
+SortPlot.o: SortPlot.cpp
+			$(COMPILE) SortPlot.cpp

@@ -36,7 +36,7 @@ void SortPlot::on_sort_button_click_event()
    //start, end, increment, sort method, color for points, radius
    //1 = mergesort (red), 2 = quicksort (blue)
    sort(1, n_max, increment, 1, new Color(1, 0, 0), 5); //merge
-   //sort(1, (int) (n_max*1.0/2.0), increment, 2, new Color(0, 0, 1), 5); //quick
+   sort(1, (int) (n_max*1.0/2.0), increment, 2, new Color(0, 0, 1), 5); //quick
    sort(1, (int) (n_max*1.0/2.0), increment, 3, new Color(0, 1, 0), 5); //selection
    sort(1, n_max, increment, 4, new Color(1, 0, 1), 5); //insertion binary
 }
@@ -128,7 +128,7 @@ CD** SortPlot::randomCDs(int num_to_create, int num_characters)
 int main(int argc, char** argv)
 {
    Gtk::Main kit(argc, argv);
-
+//hi
    Gtk::Window win;
    win.set_title("Sort!");
    win.set_position(Gtk::WIN_POS_CENTER);
