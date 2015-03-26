@@ -110,11 +110,6 @@ void Sort<T>::choosePivot(T** items, int first, int last)
 	items[first] = items[mid];
 	items[mid] = temp;
 	
-
-
-
-
-
 }
 
 //no work below this point
