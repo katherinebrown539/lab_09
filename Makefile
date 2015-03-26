@@ -22,14 +22,14 @@ Lab09: 		$(FILES)
 		$(LINK) $(EXECUTABLE) $(FILES) $(LIBS)	
 
 
-Plot.o: Plot.cpp
+Plot.o: 	Plot.cpp Plot.h
 		$(COMPILE) Plot.cpp
 		
-Point.o: Point.cpp
-		 $(COMPILE) Point.cpp
+Point.o:	Point.cpp Point.h
+		$(COMPILE) Point.cpp
 		 
-Points.o: Points.cpp
-			$(COMPILE) Points.cpp
-			
-SortPlot.o: SortPlot.cpp
-			$(COMPILE) SortPlot.cpp
+Points.o:	Points.cpp Points.h
+		$(COMPILE) Points.cpp
+		
+SortPlot.o:	SortPlot.cpp SortPlot.h Sort.h 
+		$(COMPILE) SortPlot.cpp
